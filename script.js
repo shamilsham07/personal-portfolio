@@ -30,11 +30,11 @@ function setupnav() {
   if (contact) {
     contact.addEventListener("click", (e) => {
       console.log("click")
-      if (currentUrl === "/home.html") {
+      if (currentUrl === "/services") {
         console.log("jjj")
-        contact.href = "#contact-sec";
+        contact.href = "/#contact-sec";
       } else {
-        contact.href = "/home.html#contact-sec";
+        contact.href = "#contact-sec";
       }
     });
   }
