@@ -531,4 +531,8 @@ input[type="number"]::-webkit-outer-spin-button {
   .sm-d-none {
     display: none !important;
   }
+  .contact-page input,
+textarea{
+width: 100%;
+}
 }
