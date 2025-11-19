@@ -206,7 +206,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   padding: 15px;
-  border-bottom: 1px solid white;
+
 }
 .about-card h1 {
   font-weight: 900;
@@ -452,6 +452,9 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.bb-border{
+  border-bottom: 1px solid white;
+}
 
 @media screen and (max-width: 768px) {
   .navs {
@@ -518,14 +521,20 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 38px;
   }
   .heading-home {
-    font-size: 30px;
+    font-size: 37px;
   }
   .changing-text {
-    height: 40px;
+       height: 44px;
   }
   .home-sub-heading {
     font-size: 14px;
     width: 100%;
+  }
+  .padding-inline{
+    padding-block: 30px;
+  }
+  .home-section{
+    height: 95vh;
   }
 
   .sm-d-none {
