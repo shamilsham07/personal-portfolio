@@ -15,7 +15,7 @@ function Navigate() {
   const button = document.getElementsByClassName("about-btn")[0];
   if (button) {
     button.addEventListener("click", () => {
-      window.location.href="./about.html"
+      window.location.href="./services.html"
     });
   }
 }
