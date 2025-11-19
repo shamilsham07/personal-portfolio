@@ -7,19 +7,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
       activelink(navbar.getAttribute("title"));
       setupnav();
+      Navigate();
     });
 });
+
+function Navigate() {
+  const button = document.getElementsByClassName("about-btn")[0];
+  if (button) {
+    button.addEventListener("click", () => {
+      window.location.href="./about.html"
+    });
+  }
+}
 
 function setupnav() {
   console.log("ddddd");
   const projects = document.getElementById("project-link");
   const contact = document.getElementById("contact-link");
   const currentUrl = window.location.pathname;
+
   console.log(currentUrl);
   if (projects) {
     projects.addEventListener("click", () => {
       console.log("clicked");
-      if (currentUrl === "/services.html") {
+      if (currentUrl.endsWith("/services.html")) {
         projects.href = "#project-page";
       } else {
         projects.href = "/services.html#project-page";
@@ -29,11 +40,11 @@ function setupnav() {
   if (contact) {
     contact.addEventListener("click", (e) => {
       console.log("click");
-      if (currentUrl === "/services") {
+      if (currentUrl.endsWith("/index.html")) {
         console.log("jjj");
-        contact.href = "/#contact-sec";
-      } else {
         contact.href = "#contact-sec";
+      } else {
+        contact.href = "/index.html#contact-sec";
       }
     });
   }
