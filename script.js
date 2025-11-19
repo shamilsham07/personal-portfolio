@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("./nav.html")
     .then((response) => response.text())
     .then((data) => {
-      document.getElementById("navbar-container").innerHTML = data;
       const navbar = document.getElementById("navbar-container");
       navbar.innerHTML = data;
 
@@ -19,7 +18,7 @@ function setupnav() {
   console.log(currentUrl);
   if (projects) {
     projects.addEventListener("click", () => {
-      console.log("clicked")
+      console.log("clicked");
       if (currentUrl === "/services.html") {
         projects.href = "#project-page";
       } else {
@@ -29,9 +28,9 @@ function setupnav() {
   }
   if (contact) {
     contact.addEventListener("click", (e) => {
-      console.log("click")
+      console.log("click");
       if (currentUrl === "/services") {
-        console.log("jjj")
+        console.log("jjj");
         contact.href = "/#contact-sec";
       } else {
         contact.href = "#contact-sec";
