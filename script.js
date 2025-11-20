@@ -33,7 +33,7 @@ function setupnav() {
       if (currentUrl.endsWith("/services.html")) {
         projects.href = "#project-page";
       } else {
-        projects.href = "/services.html#project-page";
+        projects.href = "services.html#project-page";
       }
     });
   }
@@ -44,7 +44,7 @@ function setupnav() {
         console.log("jjj");
         contact.href = "#contact-sec";
       } else {
-        contact.href = "/index.html#contact-sec";
+        contact.href = "index.html#contact-sec";
       }
     });
   }
