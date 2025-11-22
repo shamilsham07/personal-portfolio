@@ -50,7 +50,9 @@
               technologies and turning ideas into functional, visually appealing
               digital experiences
             </p>
-            <button class="btns about-btn reveal"  type="button">About me</button>
+            <button class="btns about-btn reveal" type="button">
+              About me
+            </button>
           </div>
           <div
             class="col-lg-5 d-flex justify-content-center align-items-center sm-d-none"
@@ -188,7 +190,7 @@
 
     <!-- third-page .............................................................-->
 
-    <section class="third-page back-color" id="contact-sec">
+    <section class="third-page back-color position-relative" id="contact-sec">
       <div class="padding-inline">
         <div class="container">
           <div class="row">
@@ -203,22 +205,25 @@
                     class="email-input"
                     name="entry.77377348"
                     placeholder="Email"
+                    required
                   />
                   <input
                     type="number"
                     class=""
                     name="entry.1097584645"
                     placeholder="Phone"
+                    required
                   />
                   <textarea
                     name="entry.233844233"
                     placeholder="message"
                     id=""
+                    required
                   ></textarea>
                   <div
                     class="w-75 d-flex justify-content-end align-items-center"
                   >
-                    <button class="con-btn" type="submit">
+                    <button class="con-btn" type="submit" id="liveToastBtn">
                       Connect with me
                       <span><i class="bi bi-caret-right-fill"></i></span>
                     </button>
@@ -227,7 +232,7 @@
               </form>
             </div>
             <div
-              class="col-lg-2 d-flex justify-content-center align-items-center   sm-d-none"
+              class="col-lg-2 d-flex justify-content-center align-items-center sm-d-none"
             >
               <div
                 class="d-flex justify-content-center align-items-center gap-5 flex-column"
@@ -240,13 +245,17 @@
           </div>
         </div>
       </div>
+
+      <div class="position-fixed toasts p-2">
+        <p class="m-0">Successfully submitted</p>
+        <img src="./images/check (3).png" class="img-fluid" alt="" />
+      </div>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js">
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

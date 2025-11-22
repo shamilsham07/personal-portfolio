@@ -36,6 +36,10 @@ body {
   background-color: #2b2e41;
   height: 240px;
   overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+.skill-card:hover{
+  transform: scale(1.04);
 }
 .first-round::after {
   content: "";
@@ -132,6 +136,11 @@ body {
   color: white;
 
   font-weight: 400;
+  transition: 0.4s ease-in-out;
+}
+.about-btn:hover{
+  transform: scale(1.04);
+  color: #1f2137;
 }
 .back-color {
   background-color: #23253a;
@@ -206,7 +215,6 @@ a:hover {
   align-items: center;
   flex-direction: column;
   padding: 15px;
-
 }
 .about-card h1 {
   font-weight: 900;
@@ -452,10 +460,16 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.bb-border{
+.bb-border {
   border-bottom: 1px solid white;
 }
-
+.con-btn{
+  transition: 0.4s ease-in-out;
+}
+.con-btn:hover{
+  transform:scale(1.04);
+  color: white;
+}
 @media screen and (max-width: 768px) {
   .navs {
     gap: 38px;
@@ -472,6 +486,41 @@ input[type="number"]::-webkit-outer-spin-button {
   .underline {
     width: 30%;
   }
+  .toasts {
+    z-index: 20000;
+    width: 300px;
+    top: -100px;
+    right: 4px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #90ee90;
+    color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+    transition: .3s ease-in-out;
+  }
+  .toasts p {
+    color: green;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: start;
+  }
+  .toasts img {
+    width: 30px;
+    height: 30px;
+  }
+  .toasts i {
+    position: fixed;
+    top: 0;
+    right: 6px;
+    font-size: 20px;
+    color: green;
+    cursor: pointer;
+  }
+
   .gaps {
     gap: 1rem;
   }
@@ -524,16 +573,16 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 37px;
   }
   .changing-text {
-       height: 44px;
+    height: 44px;
   }
   .home-sub-heading {
     font-size: 14px;
     width: 100%;
   }
-  .padding-inline{
+  .padding-inline {
     padding-block: 30px;
   }
-  .home-section{
+  .home-section {
     height: 95vh;
   }
 
@@ -541,7 +590,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: none !important;
   }
   .contact-page input,
-textarea{
-width: 100%;
-}
+  textarea {
+    width: 100%;
+  }
 }
