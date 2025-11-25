@@ -10,8 +10,55 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-.bg-theme {
-  background-color: #ff4b57;
+.box-about-sub {
+  background-color: #1f2137;
+  color: white;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.border-about-card {
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  transition: .7s ease-in-out;
+}
+
+.border-about-card:hover{
+  transform: scale(1.04);
+}
+
+
+.border-about-card h6{
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.border-about-card p{
+  font-weight: 300;
+  color: black;
+}
+
+
+
+
+.text-color{
+  color: #f0eeed;
+}
+.set-main-count h6{
+  text-transform: capitalize;
+}
+
+.text-theme {
+  color: white;
 }
 
 .first-round,
@@ -32,13 +79,36 @@ body {
   height: 100vh;
   /* overflow: hidden; */
 }
+.about-sub-content {
+  font-weight: 300;
+  color: gray;
+}
+.home-img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fafafa;
+  border-radius: 50%;
+}
+.home-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  background-position: center;
+  border-radius: 50%;
+}
+.home-section {
+  border-bottom-left-radius: 7%;
+  border-bottom-right-radius: 7%;
+}
 .skill-card {
-  background-color: #2b2e41;
   height: 240px;
   overflow: hidden;
   transition: 0.4s ease-in-out;
 }
-.skill-card:hover{
+.skilling-card {
+  transition: 0.7s ease-in-out;
+}
+.skilling-card:hover {
   transform: scale(1.04);
 }
 .first-round::after {
@@ -66,7 +136,7 @@ body {
 }
 
 .text-orange {
-  color: #ff4b57;
+  color: white;
 }
 .sub-skills {
   color: #1f2137;
@@ -74,7 +144,7 @@ body {
 }
 .heading-of-skills h6 {
   font-weight: 500;
-  color: #ff4b57;
+  color: white;
 }
 .skill-react {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -84,25 +154,25 @@ body {
 }
 .python-graph {
   width: 70%;
-  background-color: #ff4b57;
+  background-color: white;
   height: 100%;
   border-radius: 10px;
 }
 .javas-graph {
   width: 60%;
-  background-color: #ff4b57;
+  background-color: white;
   height: 100%;
   border-radius: 10px;
 }
 .jquery-graph {
   width: 40%;
-  background-color: #ff4b57;
+  background-color: white;
   height: 100%;
   border-radius: 10px;
 }
 .react-graph {
   width: 90%;
-  background-color: #ff4b57;
+  background-color: white;
   height: 100%;
   border-radius: 10px;
 }
@@ -132,21 +202,21 @@ body {
   border-radius: 2px;
 }
 .about-btn {
-  background-color: #ff4b57;
+  background-color: black;
   color: white;
 
   font-weight: 400;
   transition: 0.4s ease-in-out;
 }
-.about-btn:hover{
+.about-btn:hover {
   transform: scale(1.04);
-  color: #1f2137;
+  color: white;
 }
-.back-color {
-  background-color: #23253a;
+.bg-theme {
+  background-color: #f0eeed;
 }
 .nav {
-  background-color: #212437;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   padding: 20px;
   position: fixed;
   width: 100%;
@@ -159,6 +229,7 @@ html {
 .changing-text {
   border-right: 1px solid #fafafa;
   overflow: hidden;
+  color: black;
   display: inline-block;
   height: 79px;
   white-space: nowrap;
@@ -177,9 +248,13 @@ html {
 .about-padding {
   padding-block: 75px;
 }
-a:hover {
-  border-bottom: 1px solid #ff4b57;
+a {
   transition: ease-in-out 0.5s;
+}
+a:hover {
+  border-bottom: 1px solid black;
+
+  transform: scale(1.1);
 }
 .about {
   padding: 50px;
@@ -194,6 +269,56 @@ a:hover {
   color: white;
   text-transform: capitalize;
   font-weight: 900;
+}
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.infinite-section img {
+  width: 100px;
+  height: 100px;
+  margin-right: 150px;
+}
+.infinite-section {
+  display: inline-flex;
+  animation: scroll 10s linear infinite;
+  position: relative;
+}
+.my-tech-expert {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.infinite-section::after,
+.infinite-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.infinite-section::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), transparent);
+}
+
+.infinite-section::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), transparent);
+}
+
+.infinite {
+  border-radius: 10px;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 .about-sub {
   text-align: center;
@@ -228,6 +353,55 @@ a:hover {
 .heading-about-card h3 {
   color: white;
 }
+.contact-img-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 1px solid #fafafa;
+  border-radius: 50%;
+  background-color: #f0eeed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-img-round img {
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.contact-round {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #f0eeed;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.long-line {
+  width: 144px;
+  height: 4px;
+  background-color: #f0eeed;
+  border-radius: 3px;
+}
+.small-line {
+  width: 100px;
+  height: 4px;
+  background-color: #f0eeed;
+  border-radius: 3px;
+}
+
+.contact-round img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.c-git {
+  font-weight: 300;
+  color: blue;
+  padding: 0;
+}
 
 @keyframes typing {
   from {
@@ -256,9 +430,6 @@ a:hover {
   width: 100%;
 }
 
-.about-btn {
-  border-bottom: 1px solid #ff4b57;
-}
 .navs {
   display: flex;
   justify-content: space-between;
@@ -278,18 +449,43 @@ li {
 }
 .open-bar {
   display: none;
-  background-color: #1f2137;
+  background-color: none;
   border: none;
   z-index: 1;
 }
+.help-heading{
+  font-weight: 900;
+}
+.set-main-count{
+      padding: 33px;
+    background: white;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    width: 70%;
+    /* color: #f0eeed; */
+}
+.border-lefting{
+  border-right: 2px solid #efefef;
+}
+
+.counter-card{
+  height: 150px;
+  width: 150px;
+  background-color: #f0eeed;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .my-projects {
   font-weight: 600;
-  color: white;
+  color: black;
 }
 .underline {
   width: 10%;
   height: 3px;
-  background-color: #ff4b57;
+  background-color: #f0eeed;
 }
 .project-card {
   background-color: #fafafa;
@@ -316,7 +512,7 @@ li {
 }
 
 .closing-icon {
-  color: white;
+  color: black;
   z-index: 100000;
   display: none;
   font-size: 29px;
@@ -353,17 +549,18 @@ li {
   outline: none;
   text-align: center;
   cursor: pointer;
-  background-color: #ff4b57;
-  color: #1f2137;
-  font-weight: 600;
+  background-color: white;
+  color: black;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 17px;
+  font-size: 14px;
   border-radius: 2px;
+  border: 1px solid #efefef;
 }
 a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -373,12 +570,15 @@ a {
   font-size: 18px;
 }
 .skill-head {
-  color: #ff4b57;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 .line-skill {
   height: 3px;
   width: 50px;
-  background-color: #ff4b57;
+  background-color: black;
 }
 .skill-card img {
   width: 45px;
@@ -402,28 +602,33 @@ a {
 }
 
 .connect-page-heading {
-  color: #ff4b57;
+  color: black;
 }
 .contact-page input,
 textarea {
-  background-color: #2b2e41;
+  background-color: #fafafa;
   padding: 15px;
   border: none;
   outline: none;
-  border: 1px solid #212437;
+  border: 1px solid #fefefe;
   border-radius: 3px;
-  width: 75%;
+  width: 100%;
   color: white;
 }
+.contact-p {
+  text-align: start;
+  font-weight: 300;
+  color: gray;
+}
 .contact-page input::placeholder {
-  color: #1f2137;
-  font-size: 17px;
-  font-weight: 700;
+  color: black;
+  font-size: 14px;
+  font-weight: 200;
 }
 .contact-page textarea::placeholder {
-  color: #1f2137;
-  font-size: 17px;
-  font-weight: 700;
+  color: black;
+  font-size: 14px;
+  font-weight: 200;
   text-transform: capitalize;
 }
 .gaps {
@@ -463,14 +668,45 @@ input[type="number"]::-webkit-outer-spin-button {
 .bb-border {
   border-bottom: 1px solid white;
 }
-.con-btn{
+.con-btn {
   transition: 0.4s ease-in-out;
 }
-.con-btn:hover{
-  transform:scale(1.04);
+.con-btn:hover {
+  transform: scale(1.04);
   color: white;
+  background-color: black;
+}
+.home-center {
+  height: 100%;
+}
+.second-section {
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+}
+.second-line {
+  height: 4px;
+  color: black;
+  background-color: black;
+  width: 116px;
+  border-radius: 3px;
 }
 @media screen and (max-width: 768px) {
+  .infinite-section img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+  }
+
+  .home-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .home-sub-heading {
+    text-align: center;
+  }
+
   .navs {
     gap: 38px;
     display: flex;
@@ -500,7 +736,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: start;
     align-items: center;
     gap: 6px;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
   .toasts p {
     color: green;
@@ -534,6 +770,7 @@ input[type="number"]::-webkit-outer-spin-button {
     /* display: flex; */
     padding-block: 100px;
     transition: right ease-in-out 1s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   }
   .nav-ul {
     flex-direction: column;
@@ -585,6 +822,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .home-section {
     height: 95vh;
   }
+  .second-section {
+    border-radius: 0%;
+  }
 
   .sm-d-none {
     display: none !important;
@@ -592,5 +832,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .contact-page input,
   textarea {
     width: 100%;
+  }
+  .home-section {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }

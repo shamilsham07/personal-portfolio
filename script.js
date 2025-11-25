@@ -53,13 +53,12 @@ function setupnav() {
 const form = document.querySelector("form");
 if (form) {
   form.addEventListener("submit", function (e) {
-  
     e.preventDefault();
     const button = document.getElementsByClassName("con-btn");
     console.log(button);
     button.disabled = true;
     console.log(e.target);
-     
+
     const formdata = e.target;
     const url =
       "https://docs.google.com/forms/d/e/1FAIpQLSeYpkgt8J-QNAlSZeVFbNRY_xCOIEOFnr9KH-1gtUJ7yLoyRQ/formResponse";
@@ -73,7 +72,7 @@ if (form) {
     })
       .then((res) => {
         console.log(res);
-        console.log("fffffffffffffffff")
+        console.log("fffffffffffffffff");
         formdata.reset();
         button.disabled = false;
         opentoast();
@@ -92,6 +91,11 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       console.log(".........", entry);
       if (entry.isIntersecting) {
+        if (entry.target.classList.contains("border-lefting")) {
+          CounterActive(entry.target);
+          projectActive();
+        }
+
         console.log("hellooo");
         entry.target.classList.add("show-class");
         observer.unobserve(entry.target);
@@ -102,6 +106,9 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+document
+  .querySelectorAll(".border-lefting")
+  .forEach((el) => observer.observe(el));
 
 function activelink(e) {
   li = document.querySelector(`#${e}`);
@@ -157,18 +164,20 @@ function changingtext() {
   changingtext = document.getElementsByClassName("changing-text")[0];
 
   console.log(array[index].text);
+  if (changingtext) {
+    function show() {
+      console.log(index);
 
-  function show() {
-    console.log(index);
+      changingtext.innerHTML = array[index].text;
+      changingtext.style.animation = "none";
+      void changingtext.offsetWidth;
+      changingtext.style.animation = `typing 3s steps(${array[index].length},end), blink 0.6s step-end infinite`;
 
-    changingtext.innerHTML = array[index].text;
-    changingtext.style.animation = "none";
-    void changingtext.offsetWidth;
-    changingtext.style.animation = `typing 3s steps(${array[index].length},end), blink 0.6s step-end infinite`;
-
-    index = (index + 1) % array.length;
+      index = (index + 1) % array.length;
+    }
+    show();
   }
-  show();
+
   setInterval(show, 4000);
 }
 changingtext();
@@ -188,13 +197,13 @@ function closetoast() {
 function opentoast() {
   console.log("opened");
   const toast = document.getElementsByClassName("toasts")[0];
-  const p=toast.querySelector("p")  
-  const img=toast.querySelector("img")
+  const p = toast.querySelector("p");
+  const img = toast.querySelector("img");
   toast.style.top = "4px";
-  p.innerHTML="successfully submited";
-  p.style.color="green"
-  toast.style.backgroundColor="90ee90"
-  img.src="./images/check (3).png"
+  p.innerHTML = "successfully submited";
+  p.style.color = "green";
+  toast.style.backgroundColor = "90ee90";
+  img.src = "./images/check (3).png";
   toast.style.opacity = "1";
 
   setTimeout(() => {
@@ -205,19 +214,60 @@ function opentoast() {
 
 function openfalsetoast() {
   const toast = document.getElementsByClassName("toasts")[0];
-  const p=toast.querySelector("p")
-  const img=toast.querySelector("img")
-  console.log("ividaethi")
+  const p = toast.querySelector("p");
+  const img = toast.querySelector("img");
+  console.log("ividaethi");
   toast.style.opacity = "1";
   toast.style.backgroundColor = "#FFB09C";
   p.style.color = "#ee2400";
-  p.innerHTML="something wrong"
+  p.innerHTML = "something wrong";
   toast.style.top = "4px";
-  img.src="./images/close (1).png"
-  img.style.width="20px"
-  img.style.height="20px"
+  img.src = "./images/close (1).png";
+  img.style.width = "20px";
+  img.style.height = "20px";
   setTimeout(() => {
     toast.style.top = "-50px";
     toast.style.opacity = 0;
   }, 2000);
 }
+
+function CounterActive() {
+  console.log("jjjjjj");
+  const count = document.getElementsByClassName("experience-count")[0];
+  if (count) {
+    let counted = 1;
+    let start = 30;
+
+    const interval = setInterval(() => {
+      count.innerHTML = `${start}+`;
+      if (start <= counted) {
+        clearInterval(interval);
+      }
+      start--;
+    }, 50);
+  }
+}
+
+function projectActive() {
+  const project_value = document.getElementsByClassName("project-count")[0];
+  if (project_value) {
+    let count = 30;
+    let project = 5;
+    const interval = setInterval(() => {
+      project_value.innerHTML = `${count}+`;
+      if (count <= project) {
+        clearInterval(interval);
+      }
+      count--;
+    }, 50);
+  }
+}
+function naviagtefacebook() {
+  window.open("https://www.facebook.com/shami1sham", "_blank");
+}
+function navigatelinkdin() {
+  window.open("https://www.linkedin.com/in/shamil-sham-b92bb531b/", "_blank");
+}
+
+function naviagteinstagram() {}
+function navigatetwitter() {}
