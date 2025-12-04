@@ -91,24 +91,55 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       console.log(".........", entry);
       if (entry.isIntersecting) {
-        if (entry.target.classList.contains("border-lefting")) {
+        if (entry.target.classList.contains("set-main-count")) {
           CounterActive(entry.target);
           projectActive();
+        } else if (entry.target.classList.contains("fade-bottom")) {
+          console.log("reached");
+          console.log(entry.target);
+          entry.target.classList.add("show-class");
+        } else if (entry.target.classList.contains("reveal")) {
+          entry.target.classList.add("show-class");
+          observer.unobserve(entry.target);
+        } else if (entry.target.classList.contains("img-stacks")) {
+          document.querySelectorAll(".img-stacks").forEach((el) => {
+            el.classList.add("img-reveals");
+          });
+        } else if (entry.target.classList.contains("home-div-img")) {
+          entry.target.classList.add("banner-img");
+        } else if (entry.target.classList.contains("avatar")) {
+          console.log("printing");
+          entry.target.classList.add("animated-avatar");
+        } else if (entry.target.classList.contains("fade-up")) {
+          entry.target.classList.add("faded");
         }
 
-        console.log("hellooo");
-        entry.target.classList.add("show-class");
-        observer.unobserve(entry.target);
+        // console.log("hellooo");
+        // entry.target.classList.add("show-class");
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("show-class");
+        entry.target.classList.remove("banner-img");
+        if (entry.target.classList.contains("img-reveals")) {
+          entry.target.classList.remove("img-reveals");
+        }
       }
     });
   },
   { threshold: 0.3 }
 );
-
+document.querySelectorAll(".fade-bottom").forEach((el) => observer.observe(el));
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 document
-  .querySelectorAll(".border-lefting")
+  .querySelectorAll(".set-main-count")
   .forEach((el) => observer.observe(el));
+
+document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
+document.querySelectorAll(".img-stacks").forEach((el) => observer.observe(el));
+document
+  .querySelectorAll(".home-div-img")
+  .forEach((el) => observer.observe(el));
+document.querySelectorAll(".avatar").forEach((el) => observer.observe(el));
 
 function activelink(e) {
   li = document.querySelector(`#${e}`);
@@ -144,43 +175,6 @@ function closenav() {
   }
   console.log(close);
 }
-
-function changingtext() {
-  let index = 0;
-  const array = [
-    {
-      text: "Full stack Developer",
-      length: 20,
-    },
-    {
-      text: "Front End Developer",
-      length: 19,
-    },
-    {
-      text: "Software Engineer",
-      length: 17,
-    },
-  ];
-  changingtext = document.getElementsByClassName("changing-text")[0];
-
-  console.log(array[index].text);
-  if (changingtext) {
-    function show() {
-      console.log(index);
-
-      changingtext.innerHTML = array[index].text;
-      changingtext.style.animation = "none";
-      void changingtext.offsetWidth;
-      changingtext.style.animation = `typing 3s steps(${array[index].length},end), blink 0.6s step-end infinite`;
-
-      index = (index + 1) % array.length;
-    }
-    show();
-  }
-
-  setInterval(show, 4000);
-}
-changingtext();
 
 // ........................
 
@@ -262,6 +256,33 @@ function projectActive() {
     }, 50);
   }
 }
+
+function navigateserices() {
+  console.log("try");
+  window.location.href = "./services.html";
+}
+
+function transition() {
+  const element = document.getElementsByClassName("comment-box-1")[0];
+  const elements = document.getElementsByClassName("comment-box-2")[0];
+
+  if (element) {
+    console.log(element);
+    element.classList.add("change-trans");
+    elements.classList.add("change-web");
+  }
+}
+function transout() {
+  const element = document.getElementsByClassName("change-trans")[0];
+  const elements = document.getElementsByClassName("change-web")[0];
+
+  if (element) {
+    console.log(element);
+    element.classList.remove("change-trans");
+    elements.classList.remove("change-web");
+  }
+}
+
 function naviagtefacebook() {
   window.open("https://www.facebook.com/shami1sham", "_blank");
 }
@@ -269,5 +290,47 @@ function navigatelinkdin() {
   window.open("https://www.linkedin.com/in/shamil-sham-b92bb531b/", "_blank");
 }
 
-function naviagteinstagram() {}
-function navigatetwitter() {}
+function downloadcv() {
+  console.log("download your own");
+  const link = document.createElement("a");
+  link.href = "./images/shamil mt cv (2).pdf";
+  link.download = "cv.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function navigategit() {
+  console.log("hrlll");
+  window.open("https://github.com/shamilsham07", "_blank");
+}
+function navigateinsta() {
+  console.log("drlll");
+  window.open(
+    "https://www.instagram.com/shamil__sham_?igsh=dmYwZXY1ZzZhaGNz&utm_source=qr",
+    "_blank"
+  );
+}
+
+function mouseovercall(){
+ const element= document.getElementsByClassName("toast-call")[0]
+ element.classList.add("toast-opacity")
+}
+function removemousecall(){
+  const element=document.getElementsByClassName("toast-opacity")[0]
+  element.classList.remove("toast-opacity")
+}
+function copiedtext(){
+  navigator.clipboard.writeText("+971 0521447030")
+  const element=document.getElementsByClassName("bi-clipboard")[0]
+  element.classList.toggle("bi-clipboard")
+ element.classList.toggle("bi-clipboard-check")
+ element.style.color="blue"
+ setTimeout(()=>{
+element.classList.toggle("bi-clipboard-check")
+  element.classList.toggle("bi-clipboard")
+  element.style.color="black"
+
+ },1000)
+ 
+}

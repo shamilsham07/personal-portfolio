@@ -35,66 +35,240 @@
   </head>
   <body>
     <div id="navbar-container" title="home"></div>
-    <section class="bg-theme text-theme w-100 home-section">
+    <section
+      class="bg-theme text-theme w-100 home-section position-relative pt-5"
+    >
       <div class="container h-100">
-        <div class="row justify-content-center align-items-center h-100">
-          <div
-            class="col-lg-12 home-center col-sm-12 d-flex justify-content-center align-items-center flex-column"
-          >
-            <div class="home-img">
-              <img
-                src="./images/WhatsApp Image 2025-11-24 at 2.53.56 PM.jpeg"
-                class=""
-                alt=""
-              />
+        <div class="row h-100 gaps justify-content-center align-items-center">
+          <div class="col-lg-4 col-12">
+            <div class="homemain-sec">
+              <h2 class="text-black">hello i'm</h2>
+              <h1 class="">SHAMIL</h1>
+              <p class="text-black">
+                Passionate developer with experience in React, JavaScript, and
+                modern web technologies. I enjoy building clean, user-friendly
+                interfaces and continuously improving my skills.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12">
+            <img src="./images/Avatar.png" class="home-div-img" alt="" />
+          </div>
+          <div class="col-lg-4 col-12">
+            <div class="home-services">
+              <h5>services</h5>
+              <p class="w-75">
+                Frontend development, full-stack web applications, UI/UX design,
+                responsive layouts, and API integration.
+              </p>
+              <button onclick="navigateserices()">
+                show more <i class="bi bi-arrow-right"></i>
+              </button>
             </div>
 
-            <h1 class="heading-home reveal text-black">
-              Hello I'm <span class="text-black">Shamil </span>
-            </h1>
-            <h1 class="heading-home text-black">
-              <span class="changing-text"></span>
-            </h1>
-            <p class="home-sub-heading reveal text-black text-center">
-              I’m a passionate web developer focused on creating clean,
-              responsive, and user-friendly websites. I enjoy learning new
-              technologies and turning ideas into functional, visually appealing
-              digital experiences
-            </p>
-            <button class="btns about-btn reveal" type="button">
-              About me
-            </button>
+            <div class="home-services pt-4">
+              <h5>About-me</h5>
+              <p class="w-75">
+                I'm, a developer who builds clean, modern, and user-friendly web
+                applications.
+              </p>
+              <button onclick="navigateserices()">
+                show more <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <div class="round py-4">
+              <button class="rounding" onclick="navigategit()">
+                <img src="./images/github (1).png" class="" alt="" />
+              </button>
+              <button class="rounding" onclick="navigateinsta()">
+                <img src="./images/instagram.png" alt="" />
+              </button>
+              <button class="rounding position-relative" onmouseover="mouseovercall()" onmouseout="removemousecall()">
+                <img src="./images/telephone.png" alt="" />
+                <div class="toast-call px-2 py-2">
+                  <h6 class="m-0">+971 521447030 <i class="bi bi-clipboard" onclick="copiedtext()"></i></h6>
+                </div>
+              </button>
+            </div>
           </div>
-          <div
-            class="col-lg-5 d-flex justify-content-center align-items-center sm-d-none"
-          ></div>
+        </div>
+      </div>
+      <div class="position-absolute static-div sm-d-none">
+        <div class="px-2 h-100">
+          <div class="row h-100 m-0 p-0">
+            <div class="col-lg-6 col-12 h-100 m-0 p-0">
+              <div class="stacks-prefer h-100 gap-2">
+                <div
+                  class="d-flex justify-content-center align-items-center gap-3"
+                >
+                  <div class="dot"></div>
+                  <div><h3>Full stack Developer</h3></div>
+                </div>
+                <div
+                  class="d-flex justify-content-center align-items-center gap-3"
+                >
+                  <div class="dot"></div>
+                  <div><h3>Software engineer</h3></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 h-100 m-0 p-0">
+              <div class="stacks-prefer h-100">
+                <div
+                  class="d-flex justify-content-center align-items-center gap-3"
+                >
+                  <div class="dot"></div>
+                  <div><h3>database-managment</h3></div>
+                </div>
+                <div
+                  class="d-flex justify-content-center align-items-center px-3 gap-3"
+                >
+                  <div class="dot"></div>
+                  <div><h3>Ui/Ux Design</h3></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- .....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-    <div class="py-2">
+    <div class="py-5 bg-white">
       <div class="container">
-        <h2 class="text-center my-tech-expert">My Tech Expertise</h2>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="second-line"></div>
-        </div>
-        <section class="infinite p-5">
-          <div class="scroll-container">
-            <div class="infinite-section">
-              <img src="./images/python.png" alt="" />
-              <img src="./images/java-script.png" alt="" />
-              <img src="./images/django.png" alt="" />
-              <img src="./images/sql-server.png" alt="" />
-              <img src="./images/science.png" alt="" />
-              <img src="./images/python.png" alt="" />
-              <img src="./images/java-script.png" alt="" />
-              <img src="./images/django.png" alt="" />
-              <img src="./images/sql-server.png" alt="" />
-              <img src="./images/science.png" alt="" />
+        <div class="row gaps pt-5">
+          <div class="col-lg-4 col-sm-12">
+            <div class="avaptar-img">
+              <img src="./images/Avatar.png" class="avatar" alt="" />
             </div>
           </div>
-        </section>
+          <div class="col-lg-4 col-sm-12">
+            <div class="specialist-card">
+              <div class="py-4">
+                <div class="container">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="dot"></div>
+                    <div class="speacialist-btn">
+                      <p class="m-0">detail about-me</p>
+                    </div>
+                  </div>
+                  <div class="professional-heading">
+                    <h3 class="m-0">
+                      Proffesional Summary! <span>Experiences</span>
+                    </h3>
+                  </div>
+                  <div class="professional-content pt-2">
+                    <p>
+                      A highly motivated Full Stack Developer with hands-on
+                      experience in building scalable, user-friendly web
+                      applications using modern technologies such as React.js,
+                      JavaScript, Django, and REST APIs. Skilled in designing
+                      responsive UI components, integrating backend services,
+                      <br />
+                      and optimizing application performance. Strong
+                      problem-solving ability with a focus on clean code,
+                      <br />
+                      reusable components, and best development practices. Adept
+                      at working in fast-paced environments, collaborating with
+                      cross-functional teams, and delivering high-quality
+                      products within deadlines.
+                    </p>
+                  </div>
+                  <div class="pt-2">
+                    <button class="downlaod-cv" onclick="downloadcv()">
+                      download cv <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-sm-12 d-flex justify-content-center align-items-center"
+          >
+            <div>
+              <div class="specialist-card">
+                <div class="py-4">
+                  <div class="container">
+                    <h5 class="stacks-heading m-0">
+                      Stacks <span>I Use</span>
+                    </h5>
+                    <p class="m-0 pt-1 professional-content">
+                      Me leverage a comprehensive and modern technology stack,
+                      utilizing cutting-edge tools and platforms to deliver high
+                      performance, scalability, and reliability in all mine
+                      projects.
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-4 flex-wrap pt-2"
+                    >
+                      <img
+                        src="./images/django.png"
+                        class="img-stacks"
+                        alt=""
+                      />
+                      <img
+                        src="./images/java-script.png"
+                        class="img-stacks"
+                        alt=""
+                      />
+                      <img
+                        src="./images/science.png"
+                        class="img-stacks"
+                        alt=""
+                      />
+                      <img
+                        src="./images/python.png"
+                        class="img-stacks"
+                        alt=""
+                      />
+                      <img
+                        src="./images/download.png"
+                        alt=""
+                        class="img-stacks"
+                      />
+                      <img
+                        src="./images/sql-server (1).png"
+                        alt=""
+                        class="img-stacks"
+                      />
+                      <img
+                        src="./images/download (3).png"
+                        alt=""
+                        class="img-stacks"
+                      />
+                      <img
+                        src="./images/download (1).png"
+                        alt=""
+                        class="img-stacks"
+                      />
+                      <img
+                        src="./images/download (2).png"
+                        alt=""
+                        class="img-stacks"
+                      />
+                      <img
+                        src="./images/download (4).png"
+                        alt=""
+                        class="img-stacks"
+                      />
+                      <img
+                        src="./images/download.jpeg"
+                        alt=""
+                        class="img-stacks"
+                      />
+                      <img
+                        src="./images/download (5).png"
+                        alt=""
+                        class="img-stacks"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -113,7 +287,7 @@
           </div>
           <div class="py-5">
             <div class="row m-0 gaps">
-              <div class="col-md-10 m-0 p-0 col-sm-12">
+              <div class="col-12 m-0 p-0 col-sm-12">
                 <div class="row m-0 gaps">
                   <div class="col-md-4 col-sm-12">
                     <div class="container skilling-card bg-white text-black">
@@ -208,6 +382,207 @@
       </div>
     </section>
 
+    <!-- developing-phase..........................----------------................. -->
+
+    <section class="developing-phase-3">
+      <div class="padding-inline">
+        <div class="container">
+          <div class="d-flex justify-content-center align-items-center gap-2">
+            <div class="dot"></div>
+            <div class="border-heading">
+              <h6 class="m-0">Developmment-phase</h6>
+            </div>
+          </div>
+          <div class="pt-2 heading-development text-center">
+            <h3 class="text-center">Developmment-<span>phases</span></h3>
+          </div>
+          <div class="pt-3">
+            <div class="row">
+              <div class="col-lg-4 col-sm-12">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                      <div
+                        class="col-lg-6 col-sm-12 d-flex flex-column justikfy-content-center align-items-center fade-bottom"
+                      >
+                        <div class="phases-image-div">
+                          <img src="./images/brain-storm.png" alt="" />
+                        </div>
+                        <div class="braibstrom">
+                          <h6>Brainstrom</h6>
+                          <p>brianstrom ideas and solution</p>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-6 col-sm-12 position-relative text-center"
+                      >
+                        <img
+                          src="./images/arrows (1).png"
+                          class="arrow-img d-lg-block d-none"
+                          alt=""
+                        />
+                        <img
+                          src="./images/Down arrow.png "
+                          class="down-arrow d-md-block d-lg-none"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 pt-2">
+                    <div class="row">
+                      <div class="col-6"></div>
+                      <div
+                        class="col-lg-6 col-sm-12 d-flex flex-column justikfy-content-center align-items-center fade-bottom"
+                      >
+                        <div class="phases-image-div">
+                          <img src="./images/ui ux.png" class="" alt="" />
+                        </div>
+                        <div class="braibstrom">
+                          <h6>UI/UX Design</h6>
+                          <p>Design user friendly- interfaces</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-12">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                      <div
+                        class="col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-center order-2 order-md-1 fade-bottom"
+                      >
+                        <div class="phases-image-div">
+                          <img src="./images/front-end 1.png" alt="" />
+                        </div>
+                        <div class="braibstrom">
+                          <h6>
+                            Front-End <br />
+                            Developmment
+                          </h6>
+                          <p>Create what users see and interact with</p>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-6 col-sm-12 position-relative order-1 order-md-2 d-flex justify-content-center align-items-center"
+                      >
+                        <img
+                          src="./images/arrows (3).png"
+                          class="arrow-img d-none d-lg-block"
+                          alt=""
+                        />
+                        <img
+                          src="./images/Down arrow.png "
+                          class="down-arrow d-md-block d-lg-none"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 pt-2">
+                    <div class="row">
+                      <div
+                        class="col-lg-6 col-sm-12 position-relative d-flex justify-content-center align-items-center"
+                      >
+                        <img
+                          src="./images/arrows (2).png"
+                          class="arrow-down d-none d-lg-block"
+                          alt=""
+                        />
+                        <img
+                          src="./images/Down arrow.png "
+                          class="down-arrow d-md-block d-lg-none"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="col-lg-6 col-sm-12 d-flex flex-column justikfy-content-center align-items-center fade-bottom"
+                      >
+                        <div class="phases-image-div">
+                          <img src="./images/back-end.png" alt="" />
+                        </div>
+                        <div class="braibstrom">
+                          <h6>
+                            Back/End <br />
+                            Development
+                          </h6>
+                          <p>build the behind-the-scenes functionality</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                      <div
+                        class="col-lg-6 col-sm-12 d-flex flex-column justikfy-content-center align-items-center fade-bottom order-2 order-md-1"
+                      >
+                        <div class="phases-image-div">
+                          <img src="./images/testingg.png" alt="" />
+                        </div>
+                        <div class="braibstrom">
+                          <h6>Testing</h6>
+                          <p>Ensure everything works perfectly</p>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-6 col-sm-12 position-relative d-flex justify-content-center align-items-center order-1 order-md-2"
+                      >
+                        <img
+                          src="./images/arrows (5).png"
+                          class="arrow-img d-none d-lg-block"
+                          alt=""
+                        />
+                        <img
+                          src="./images/Down arrow.png "
+                          class="down-arrow d-md-block d-lg-none"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 pt-2">
+                    <div class="row">
+                      <div
+                        class="col-lg-6 col-sm-12 position-relative d-flex justify-content-center align-items-center order-2 order-md-1"
+                      >
+                        <img
+                          src="./images/arrows (4).png"
+                          class="arrowsecond-down d-none d-lg-block"
+                          alt=""
+                        />
+                        <img
+                          src="./images/Down arrow.png "
+                          class="down-arrow d-md-block d-lg-none"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="col-lg-6 col-sm-12 wdz d-flex flex-column justikfy-content-center align-items-center fade-bottom order-2 order-md-1"
+                      >
+                        <div class="phases-image-div">
+                          <img src="./images/live.png" alt="" />
+                        </div>
+                        <div class="braibstrom">
+                          <h6>Go Live</h6>
+                          <p>launch your project for everyone to use</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- third-page .............................................................-->
 
     <section class="third-page back-color position-relative" id="contact-sec">
@@ -222,9 +597,9 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12 order-2 order-md-1">
               <div class="row">
-                <div class="col-12">
+                <div class="col-12 reveal">
                   <div class="pt-4">
                     <h5 class="">Get in touch with me</h5>
                     <p class="contact-p">
@@ -237,7 +612,7 @@
               </div>
               <div class="row">
                 <div
-                  class="col-12 d-flex justify-content-start align-items-center gap-3"
+                  class="col-12 d-flex justify-content-start align-items-center gap-3 reveal"
                 >
                   <div class="contact-img-round">
                     <img src="./images/github (1).png" alt="" />
@@ -249,7 +624,7 @@
               </div>
               <div class="row pt-2">
                 <div
-                  class="col-12 d-flex justify-content-start align-items-center gap-3"
+                  class="col-12 d-flex justify-content-start align-items-center gap-3 reveal"
                 >
                   <div class="contact-img-round">
                     <img src="./images/telephone.png" alt="" />
@@ -267,23 +642,41 @@
                   class="col-12 d-flex justify-content-center align-items-center gap-5"
                 >
                   <div class="contact-round">
-                   
-                      <img src="./images/facebook.png" class="" alt="" onclick="naviagtefacebook()" />
-                    
+                    <img
+                      src="./images/facebook.png"
+                      class=""
+                      alt=""
+                      onclick="naviagtefacebook()"
+                    />
                   </div>
                   <div class="contact-round">
-                    <img src="./images/instagram.png" class="" alt="" onclick="naviagteinstagram()"/>
+                    <img
+                      src="./images/instagram.png"
+                      class=""
+                      alt=""
+                      onclick="naviagteinstagram()"
+                    />
                   </div>
                   <div class="contact-round">
-                    <img src="./images/linkedin.png" class="" alt="" onclick="navigatelinkdin()" />
+                    <img
+                      src="./images/linkedin.png"
+                      class=""
+                      alt=""
+                      onclick="navigatelinkdin()"
+                    />
                   </div>
                   <div class="contact-round">
-                    <img src="./images/twitter.png" class="" alt="" onclick="navigatetwitter()" />
+                    <img
+                      src="./images/twitter.png"
+                      class=""
+                      alt=""
+                      onclick="navigatetwitter()"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12 order-1 order-md-2">
               <form>
                 <div class="d-flex flex-column gap-3 contact-page pt-4 reveal">
                   <input
