@@ -83,10 +83,17 @@
               <button class="rounding" onclick="navigateinsta()">
                 <img src="./images/instagram.png" alt="" />
               </button>
-              <button class="rounding position-relative" onmouseover="mouseovercall()" onmouseout="removemousecall()">
+              <button
+                class="rounding position-relative"
+                onmouseover="mouseovercall()"
+                onmouseout="removemousecall()"
+              >
                 <img src="./images/telephone.png" alt="" />
                 <div class="toast-call px-2 py-2">
-                  <h6 class="m-0">+971 521447030 <i class="bi bi-clipboard" onclick="copiedtext()"></i></h6>
+                  <h6 class="m-0">
+                    +971 521447030
+                    <i class="bi bi-clipboard" onclick="copiedtext()"></i>
+                  </h6>
                 </div>
               </button>
             </div>
@@ -641,38 +648,18 @@
                 <div
                   class="col-12 d-flex justify-content-center align-items-center gap-5"
                 >
-                  <div class="contact-round">
-                    <img
-                      src="./images/facebook.png"
-                      class=""
-                      alt=""
-                      onclick="naviagtefacebook()"
-                    />
-                  </div>
-                  <div class="contact-round">
-                    <img
-                      src="./images/instagram.png"
-                      class=""
-                      alt=""
-                      onclick="naviagteinstagram()"
-                    />
-                  </div>
-                  <div class="contact-round">
-                    <img
-                      src="./images/linkedin.png"
-                      class=""
-                      alt=""
-                      onclick="navigatelinkdin()"
-                    />
-                  </div>
-                  <div class="contact-round">
-                    <img
-                      src="./images/twitter.png"
-                      class=""
-                      alt=""
-                      onclick="navigatetwitter()"
-                    />
-                  </div>
+                  <button class="contact-round" onclick="naviagtefacebook()">
+                    <img src="./images/facebook.png" class="" alt="" />
+                  </button>
+                  <button class="contact-round" onclick="navigateinsta()">
+                    <img src="./images/instagram.png" class="" alt="" />
+                  </button>
+                  <button class="contact-round" onclick="navigatelinkdin()">
+                    <img src="./images/linkedin.png" class="" alt="" />
+                  </button>
+                  <button class="contact-round" onclick="navigatetwitter()">
+                    <img src="./images/twitter.png" class="" alt="" />
+                  </button>
                 </div>
               </div>
             </div>

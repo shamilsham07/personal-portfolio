@@ -661,6 +661,36 @@ a:hover {
     border-color: transparent;
   }
 }
+.education-head{
+  text-transform: capitalize;
+  color: #8f3245;
+  font-weight: 700;
+}
+.skill-set-1{
+  border-left: 1px solid #8f3245;
+  height: 78px;
+}
+.skill-set-2{
+  border-left: 1px solid #8f3245;
+  height: 78px;
+}.skill-set-3{
+  border-left: 1px solid #8f3245;
+  height: 78px;
+}
+.star-skill{
+  position: absolute;
+      top: -5px;
+      left: -8px;
+      color: #8f3245;
+}
+.coding-skill{
+  font-weight: 700;
+  text-transform: lowercase;
+}
+/* .heading-pyth{
+  font-weight: 400;
+} */
+
 .padding-inline {
   padding-block: 120px;
 }
@@ -765,9 +795,9 @@ li {
 .footer {
   background-color: #212437;
 }
-/* .active-nav {
-  border-bottom: 1px solid #ff4b57;
-} */
+.active-nav {
+  border-top: 2px solid #8f3245;
+}
 .slow-1 {
   transition: all 0.9s ease !important;
 }
@@ -1025,6 +1055,17 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+#skill-page{
+
+}
+
+ul li a{
+  display: inline-block;
+  transition: 0.9s ease-in-out;
+}
+ul li a:hover{
+transform: scale(1.08);
+}
 .heading-skill {
   color: #ff4b57;
 }
@@ -1196,7 +1237,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .second-section {
     border-radius: 0%;
   }
-
+.star-skill{
+  height: auto;
+}
   .sm-d-none {
     display: none !important;
   }
