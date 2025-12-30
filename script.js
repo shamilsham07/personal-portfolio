@@ -112,6 +112,10 @@ const observer = new IntersectionObserver(
           entry.target.classList.add("animated-avatar");
         } else if (entry.target.classList.contains("fade-up")) {
           entry.target.classList.add("faded");
+        } else if (entry.target.classList.contains("delay-second")) {
+          entry.target.classList.add("fade-fromleft");
+        } else if (entry.target.classList.contains("button-delay")) {
+          entry.target.classList.add("fade-btn");
         }
 
         // console.log("hellooo");
@@ -141,11 +145,20 @@ document
   .forEach((el) => observer.observe(el));
 document.querySelectorAll(".avatar").forEach((el) => observer.observe(el));
 
+document
+  .querySelectorAll(".delay-second")
+  .forEach((el) => observer.observe(el));
+document
+  .querySelectorAll(".button-delay")
+  .forEach((el) => observer.observe(el));
+
 function activelink(e) {
   li = document.querySelector(`#${e}`);
+  a=li.querySelector("a")
   console.log(li);
+  console.log("...",a)
   if (li) {
-    li.classList.add("active-nav");
+    a.classList.add("active-nav");
   }
 }
 
@@ -161,6 +174,19 @@ function opensidebar() {
   }, 2000);
 
   nav.classList.add("nav-open");
+  if (window.innerWidth < 768) {
+    console.log("klklklklkl");
+    const stylishnav = document.getElementsByClassName("stylish-nav")[0];
+    console.log("...", stylishnav);
+    if (stylishnav) {
+      console.log("kjkdsgdh");
+    
+    stylishnav.addEventListener("pointerleave", () => {
+        console.log("mouseout");
+        closenav();
+      });
+    }
+  }
 }
 
 function closenav() {
@@ -312,25 +338,82 @@ function navigateinsta() {
   );
 }
 
-function mouseovercall(){
- const element= document.getElementsByClassName("toast-call")[0]
- element.classList.add("toast-opacity")
+function mouseovercall() {
+  const element = document.getElementsByClassName("toast-call")[0];
+  element.classList.add("toast-opacity");
 }
-function removemousecall(){
-  const element=document.getElementsByClassName("toast-opacity")[0]
-  element.classList.remove("toast-opacity")
+function removemousecall() {
+  const element = document.getElementsByClassName("toast-opacity")[0];
+  element.classList.remove("toast-opacity");
 }
-function copiedtext(){
-  navigator.clipboard.writeText("+971 0521447030")
-  const element=document.getElementsByClassName("bi-clipboard")[0]
-  element.classList.toggle("bi-clipboard")
- element.classList.toggle("bi-clipboard-check")
- element.style.color="blue"
- setTimeout(()=>{
-element.classList.toggle("bi-clipboard-check")
-  element.classList.toggle("bi-clipboard")
-  element.style.color="black"
+function copiedtext() {
+  navigator.clipboard.writeText("+971 0521447030");
+  const element = document.getElementsByClassName("bi-clipboard")[0];
+  element.classList.toggle("bi-clipboard");
+  element.classList.toggle("bi-clipboard-check");
+  element.style.color = "blue";
+  setTimeout(() => {
+    element.classList.toggle("bi-clipboard-check");
+    element.classList.toggle("bi-clipboard");
+    element.style.color = "black";
+  }, 1000);
+}
+let imageindex = 0;
 
- },1000)
- 
-}
+// function imagecarousel() {
+//   const curentimage = document.getElementsByClassName("current")[0];
+//   const previousimage = document.getElementsByClassName("previous")[0];
+//   const nextimage = document.getElementsByClassName("nextimage")[0];
+//   console.log(
+//     "...............................................////////////////////////////////////////////////////////"
+//   );
+//   console.log(curentimage);
+//   console.log(previousimage);
+//   console.log(nextimage);
+//   const imagearray = [
+//     "./images/programming-background-collage.jpg",
+//     "./images/5779230.jpg",
+//     "./images/programmer-night.jpg",
+//     "./images/online-business-database.jpg",
+//   ];
+
+//   if (curentimage) {
+//     const nextindex = (imageindex + 1) % imagearray.length;
+//     const previousindex =
+//       (imageindex - 1 + imagearray.length) % imagearray.length;
+
+//     [curentimage, nextimage, previousimage].forEach(
+//       (img) => (img.style.opacity = 0)
+//     );
+//     curentimage.src = imagearray[imageindex];
+//     previousimage.src = imagearray[previousindex];
+//     nextimage.src = imagearray[nextindex];
+
+//     [curentimage, nextimage, previousimage].forEach(
+//       (img) => (img.style.opacity = 1)
+//     );
+//   }
+//   setTimeout(() => {
+//     imageindex = (imageindex + 1) % imagearray.length;
+//   }, 50);
+//   setTimeout(imagecarousel, 2000);
+// }
+// imagecarousel();
+var prevOffset = window.pageYOffset;
+window.onscroll = function () {
+  if (window.innerWidth > 768) {
+    var currentoffset = window.pageYOffset;
+    if (currentoffset > prevOffset) {
+      console.log("good");
+      setTimeout(() => {
+        const nav = document.getElementsByClassName("nav")[0];
+        nav.style.transition = "opacity .700s ease-in-out";
+
+        nav.style.opacity = "0";
+      }, 700);
+    } else {
+      this.document.getElementsByClassName("nav")[0].style.opacity = 1;
+    }
+    prevOffset = currentoffset;
+  }
+};

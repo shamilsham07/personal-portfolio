@@ -35,119 +35,92 @@
   </head>
   <body>
     <div id="navbar-container" title="home"></div>
-    <section
-      class="bg-theme text-theme w-100 home-section position-relative pt-5"
-    >
-      <div class="container h-100">
-        <div class="row h-100 gaps justify-content-center align-items-center">
-          <div class="col-lg-4 col-12">
-            <div class="homemain-sec">
-              <h2 class="text-black">hello i'm</h2>
-              <h1 class="">SHAMIL</h1>
-              <p class="text-black">
-                Passionate developer with experience in React, JavaScript, and
-                modern web technologies. I enjoy building clean, user-friendly
-                interfaces and continuously improving my skills.
-              </p>
+    <div class="sticky-section hide-scrollbar">
+      <section class="bg-theme text-theme w-100 home-section pt-5">
+        <div class="container h-100">
+          <div class="row h-100 gaps justify-content-center align-items-center">
+            <div class="col-lg-4 col-12">
+              <div class="homemain-sec">
+                <h2 class="text-white">hello i'm</h2>
+                <h1 class="text-white">SHAMIL</h1>
+                <p class="text-white">
+                  Passionate developer with experience in React, JavaScript, and
+                  modern web technologies. I enjoy building clean, user-friendly
+                  interfaces and continuously improving my skills.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-12">
-            <img src="./images/Avatar.png" class="home-div-img" alt="" />
-          </div>
-          <div class="col-lg-4 col-12">
-            <div class="home-services">
-              <h5>services</h5>
-              <p class="w-75">
-                Frontend development, full-stack web applications, UI/UX design,
-                responsive layouts, and API integration.
-              </p>
-              <button onclick="navigateserices()">
-                show more <i class="bi bi-arrow-right"></i>
-              </button>
+            <div class="col-lg-4 col-12">
+              <img src="./images/Avatar.png" class="home-div-img" alt="" />
             </div>
+            <div class="col-lg-4 col-12">
+              <div class="home-services">
+                <h5 class="text-white">services</h5>
+                <p class="w-75 text-white">
+                  Frontend development, full-stack web applications, UI/UX
+                  design, responsive layouts, and API integration.
+                </p>
+                <button onclick="navigateserices()">
+                  show more <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
 
-            <div class="home-services pt-4">
-              <h5>About-me</h5>
-              <p class="w-75">
-                I'm, a developer who builds clean, modern, and user-friendly web
-                applications.
-              </p>
-              <button onclick="navigateserices()">
-                show more <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
-            <div class="round py-4">
-              <button class="rounding" onclick="navigategit()">
-                <img src="./images/github (1).png" class="" alt="" />
-              </button>
-              <button class="rounding" onclick="navigateinsta()">
-                <img src="./images/instagram.png" alt="" />
-              </button>
-              <button
-                class="rounding position-relative"
-                onmouseover="mouseovercall()"
-                onmouseout="removemousecall()"
-              >
-                <img src="./images/telephone.png" alt="" />
-                <div class="toast-call px-2 py-2">
-                  <h6 class="m-0">
-                    +971 521447030
-                    <i class="bi bi-clipboard" onclick="copiedtext()"></i>
-                  </h6>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="position-absolute static-div sm-d-none">
-        <div class="px-2 h-100">
-          <div class="row h-100 m-0 p-0">
-            <div class="col-lg-6 col-12 h-100 m-0 p-0">
-              <div class="stacks-prefer h-100 gap-2">
-                <div
-                  class="d-flex justify-content-center align-items-center gap-3"
-                >
-                  <div class="dot"></div>
-                  <div><h3>Full stack Developer</h3></div>
-                </div>
-                <div
-                  class="d-flex justify-content-center align-items-center gap-3"
-                >
-                  <div class="dot"></div>
-                  <div><h3>Software engineer</h3></div>
-                </div>
+              <div class="home-services pt-4">
+                <h5 class="text-white">About-me</h5>
+                <p class="w-75 text-white">
+                  I'm, a developer who builds clean, modern, and user-friendly
+                  web applications.
+                </p>
+                <button onclick="navigateserices()">
+                  show more <i class="bi bi-arrow-right"></i>
+                </button>
               </div>
-            </div>
-            <div class="col-lg-6 col-12 h-100 m-0 p-0">
-              <div class="stacks-prefer h-100">
-                <div
-                  class="d-flex justify-content-center align-items-center gap-3"
+              <div class="round py-4">
+                <button class="rounding" onclick="navigategit()">
+                  <img src="./images/github (1).png" class="" alt="" />
+                </button>
+                <button class="rounding" onclick="navigateinsta()">
+                  <img src="./images/instagram.png" alt="" />
+                </button>
+                <button
+                  class="rounding position-relative"
+                  onmouseover="mouseovercall()"
+                  onmouseout="removemousecall()"
                 >
-                  <div class="dot"></div>
-                  <div><h3>database-managment</h3></div>
-                </div>
-                <div
-                  class="d-flex justify-content-center align-items-center px-3 gap-3"
-                >
-                  <div class="dot"></div>
-                  <div><h3>Ui/Ux Design</h3></div>
-                </div>
+                  <img src="./images/telephone.png" alt="" />
+                  <div class="toast-call px-2 py-2">
+                    <h6 class="m-0">
+                      +971 521447030
+                      <i class="bi bi-clipboard" onclick="copiedtext()"></i>
+                    </h6>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section
+        class="second-sticky bg-black d-flex justify-content-center align-items-center flex-column"
+      >
+        <h1 class="text-white text-center delay-second">
+          Don't Just think <br />
+          lets build it.
+        </h1>
+        <div class="pt-2 text-center">
+          <button class="second-btn button-delay">connect</button>
+        </div>
+      </section>
+    </div>
 
     <!-- .....................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-    <div class="py-5 bg-white">
+    <div class="py-5 bg-black">
       <div class="container">
         <div class="row gaps pt-5">
           <div class="col-lg-4 col-sm-12">
-            <div class="avaptar-img">
-              <img src="./images/Avatar.png" class="avatar" alt="" />
-            </div>
+            <!-- <div class="avaptar-img">
+              <img src="./images/painting-kid-s-portrait-removebg-preview.png" class="avatar" alt="" />
+            </div> -->
           </div>
           <div class="col-lg-4 col-sm-12">
             <div class="specialist-card">
@@ -156,16 +129,16 @@
                   <div class="d-flex align-items-center gap-2">
                     <div class="dot"></div>
                     <div class="speacialist-btn">
-                      <p class="m-0">detail about-me</p>
+                      <p class="m-0 text-white">detail about-me</p>
                     </div>
                   </div>
                   <div class="professional-heading">
-                    <h3 class="m-0">
+                    <h3 class="m-0 text-white fade-bottom">
                       Proffesional Summary! <span>Experiences</span>
                     </h3>
                   </div>
                   <div class="professional-content pt-2">
-                    <p>
+                    <p class="text-white fade-bottom">
                       A highly motivated Full Stack Developer with hands-on
                       experience in building scalable, user-friendly web
                       applications using modern technologies such as React.js,
@@ -182,7 +155,7 @@
                     </p>
                   </div>
                   <div class="pt-2">
-                    <button class="downlaod-cv" onclick="downloadcv()">
+                    <button class="downlaod-cv fade-bottom" onclick="downloadcv()">
                       download cv <i class="bi bi-arrow-up-right"></i>
                     </button>
                   </div>
@@ -197,10 +170,10 @@
               <div class="specialist-card">
                 <div class="py-4">
                   <div class="container">
-                    <h5 class="stacks-heading m-0">
-                      Stacks <span>I Use</span>
+                    <h5 class="stacks-heading m-0 text-white fade-bottom">
+                      Stacks <span class="text-white">I Use</span>
                     </h5>
-                    <p class="m-0 pt-1 professional-content">
+                    <p class="m-0 pt-1 professional-content text-white fade-bottom">
                       Me leverage a comprehensive and modern technology stack,
                       utilizing cutting-edge tools and platforms to deliver high
                       performance, scalability, and reliability in all mine
@@ -281,104 +254,101 @@
 
     <!-- ........................................................................... -->
 
-    <section class="second-section bg-theme text-theme">
+    <section class="second-section bg-black text-theme">
       <div class="padding-inline">
         <div class="container">
           <div class="services-sub">
             <div class="container">
-              <h6 class="reveal">Services</h6>
-
-              <h1 class="skill-head reveal">Skill-Set</h1>
-              <div class="line-skill reveal"></div>
-            </div>
-          </div>
-          <div class="py-5">
-            <div class="row m-0 gaps">
-              <div class="col-12 m-0 p-0 col-sm-12">
-                <div class="row m-0 gaps">
-                  <div class="col-md-4 col-sm-12">
-                    <div class="container skilling-card bg-white text-black">
-                      <div class="skill-card p-3 slow-1 reveal">
-                        <img src="./images/github (1).png" alt="" />
-                        <h6 class="pt-2">Git Version Control</h6>
-                        <p>
-                          Efficient in managing code versions, branching,
-                          merging, and collaborating using GitHub. If you want,
-                          I can also write cards for your other skills.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-12">
-                    <div class="container skilling-card bg-white text-black">
-                      <div class="skill-card p-3 reveal slow-2">
-                        <img src="./images/software.png" alt="" />
-                        <h6 class="pt-2">Software Developmment</h6>
-                        <p>
-                          Develops robust applications with a focus on
-                          performance, usability, and clean architecture. If you
-                          want, I can match the style with your other skill
-                          cards.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-12">
-                    <div class="container skilling-card bg-white text-black">
-                      <div class="skill-card p-3 reveal slow-3">
-                        <img src="./images/backend (1).png" alt="" />
-                        <h6 class="pt-2">Backend Developmment</h6>
-                        <p>
-                          Skilled in backend logic, API development,
-                          authentication, and database operations. If you want,
-                          I can also write one matching your frontend or
-                          full-stack cards.
-                        </p>
-                      </div>
-                    </div>
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <h6 class="best-services text-white">Best services of me</h6>
+                  <h1 class="pt-2 best-services-sub">
+                    End-to-End <br />Development Solutions
+                  </h1>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <h2 class="m-0 content-best">
+                    I am a Full Stack Developer with hands-on experience in
+                    building web applications using React.js, Django, SQL, and
+                    REST APIs.
+                  </h2>
+                  <div class="pt-2">
+                    <button class="best-btn">conatact</button>
                   </div>
                 </div>
-                <div class="pt-3">
-                  <div class="row m-0 p-0 gaps">
-                    <div class="col-md-4 col-sm-12">
-                      <div class="container skilling-card bg-white text-black">
-                        <div class="skill-card p-3 reveal slow-4">
-                          <img src="./images/sql-server (2).png" alt="" />
-                          <h6 class="pt-2">database managment</h6>
-                          <p>
-                            Proficient in database design, query optimization,
-                            and data security. If you want, I can also write one
-                            that matches your other skill cards’ tone.
-                          </p>
-                        </div>
-                      </div>
+              </div>
+              <div class="container wrapper-infinite">
+                <div class=" row-img pt-3">
+                  <div class="col-lg-4 wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/programming-background-collage.jpg"
+                        class="previous img-fluid"
+                        alt=""
+                      />
                     </div>
-                    <div class="col-md-4 col-sm-12">
-                      <div class="container skilling-card bg-white text-black">
-                        <div class="skill-card p-3 reveal slow-5">
-                          <img src="./images/www.png" alt="" />
-                          <h6 class="pt-2">Web Developmment</h6>
-                          <p>
-                            Experienced in crafting dynamic UIs, optimizing
-                            performance, and ensuring cross-browser
-                            compatibility. If you want a matching set for all
-                            your skills, I can format them consistently.
-                          </p>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="col-lg-4 wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/5779230.jpg"
+                        class="current img-fluid"
+                        alt=""
+                      />
                     </div>
-                    <div class="col-md-4 col-sm-12">
-                      <div class="container skilling-card bg-white text-black">
-                        <div class="skill-card p-3 reveal slow-5">
-                          <img src="./images/computer (1).png" alt="" />
-                          <h6 class="pt-2">Networking</h6>
-                          <p>
-                            Knowledge of IP addressing, routing, protocols, and
-                            network security basics. If you want it to match the
-                            tone of your other cards, I can tailor it.
-                          </p>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="col-lg-4 sm-d-none wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/programmer-night.jpg"
+                        class="nextimage img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 sm-d-none wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/online-business-database.jpg"
+                        class="nextimage img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                   <div class="col-lg-4 wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/programming-background-collage.jpg"
+                        class="previous img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/5779230.jpg"
+                        class="current img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 sm-d-none wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/programmer-night.jpg"
+                        class="nextimage img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 sm-d-none wrapping">
+                    <div class="card-of">
+                      <img
+                        src="./images/online-business-database.jpg"
+                        class="nextimage img-fluid"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -391,17 +361,19 @@
 
     <!-- developing-phase..........................----------------................. -->
 
-    <section class="developing-phase-3">
+    <section class="developing-phase-3 bg-black">
       <div class="padding-inline">
         <div class="container">
           <div class="d-flex justify-content-center align-items-center gap-2">
             <div class="dot"></div>
             <div class="border-heading">
-              <h6 class="m-0">Developmment-phase</h6>
+              <h6 class="m-0 text-white">Developmment-phase</h6>
             </div>
           </div>
           <div class="pt-2 heading-development text-center">
-            <h3 class="text-center">Developmment-<span>phases</span></h3>
+            <h3 class="text-center text-white">
+              Developmment-<span class="text-white">phases</span>
+            </h3>
           </div>
           <div class="pt-3">
             <div class="row">
@@ -592,14 +564,18 @@
 
     <!-- third-page .............................................................-->
 
-    <section class="third-page back-color position-relative" id="contact-sec">
+    <section class="third-page bg-theme position-relative" id="contact-sec">
       <div class="padding-inline">
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
               <div>
-                <h1 class="connect-page-heading reveal">Connect with me</h1>
-                <p class="m-0">Iam looking Forward from hearing you soon!</p>
+                <h1 class="connect-page-heading reveal text-white">
+                  Connect with me
+                </h1>
+                <p class="m-0 text-white">
+                  Iam looking Forward from hearing you soon!
+                </p>
               </div>
             </div>
           </div>
@@ -608,8 +584,8 @@
               <div class="row">
                 <div class="col-12 reveal">
                   <div class="pt-4">
-                    <h5 class="">Get in touch with me</h5>
-                    <p class="contact-p">
+                    <h5 class="text-white">Get in touch with me</h5>
+                    <p class="contact-p text-white">
                       Have a project in mind or want to collaborate? I’d love to
                       hear from you. Feel free to reach out anytime — I’m always
                       open to discussing new opportunities, ideas, or questions.
@@ -642,7 +618,7 @@
                 </div>
               </div>
               <div class="text-center">
-                <h6>Follow me</h6>
+                <h6 class="text-white">Follow me</h6>
               </div>
               <div class="row pt-1">
                 <div
